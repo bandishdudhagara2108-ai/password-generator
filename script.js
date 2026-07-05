@@ -8,13 +8,14 @@ const numbers = document.getElementById("numbers");
 const symbols = document.getElementById("symbols");
 
 const generateBtn = document.querySelector(".generate");
+const copyBtn = document.getElementById("copyBtn");
 
-// Update slider value
+// Update slider
 slider.addEventListener("input", () => {
     lengthValue.textContent = slider.value;
 });
 
-// Generate Password
+// Generate password
 generateBtn.addEventListener("click", generatePassword);
 
 function generatePassword() {
@@ -48,5 +49,20 @@ function generatePassword() {
     password.value = pass;
 }
 
-// Generate one password automatically when page loads
+// Copy Password
+copyBtn.addEventListener("click", () => {
+
+    if(password.value === "") return;
+
+    navigator.clipboard.writeText(password.value);
+
+    copyBtn.innerHTML = "✅";
+
+    setTimeout(() => {
+        copyBtn.innerHTML = "📋";
+    }, 1500);
+
+});
+
+// Generate on page load
 generatePassword();
