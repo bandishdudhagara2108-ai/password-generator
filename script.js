@@ -49,7 +49,8 @@ function generatePassword() {
     password.value = pass;
 }
 
-// Copy Password
+const message = document.getElementById("message");
+
 copyBtn.addEventListener("click", () => {
 
     if(password.value === "") return;
@@ -57,10 +58,14 @@ copyBtn.addEventListener("click", () => {
     navigator.clipboard.writeText(password.value);
 
     copyBtn.innerHTML = "✅";
+    message.innerHTML = "Password copied!";
 
     setTimeout(() => {
         copyBtn.innerHTML = "📋";
+        message.innerHTML = "";
     }, 1500);
+
+});
 
 });
 
