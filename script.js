@@ -121,7 +121,7 @@ toggleBtn.addEventListener("click",()=>{
 
 });
 
-generatePassword();
+generatePassword(password.value=pass;);
 const themeBtn=document.getElementById("themeBtn");
 
 themeBtn.onclick=()=>{
