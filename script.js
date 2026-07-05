@@ -129,3 +129,17 @@ themeBtn.onclick=()=>{
 document.body.classList.toggle("light");
 
 };
+
+const history=document.getElementById("history");
+
+const li=document.createElement("li");
+
+li.innerHTML=pass;
+
+history.prepend(li);
+
+if(history.children.length>5){
+
+history.removeChild(history.lastChild);
+
+}
