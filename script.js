@@ -122,3 +122,10 @@ toggleBtn.addEventListener("click",()=>{
 });
 
 generatePassword();
+const themeBtn=document.getElementById("themeBtn");
+
+themeBtn.onclick=()=>{
+
+document.body.classList.toggle("light");
+
+};
