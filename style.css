@@ -230,3 +230,31 @@ font-size:14px;
 word-break:break-all;
 
 }
+
+body.light{
+
+background:#f4f4f4;
+
+}
+
+body.light .container{
+
+background:white;
+
+color:#111;
+
+}
+
+body.light input{
+
+background:#eee;
+
+color:#111;
+
+}
+
+body.light .ad-box{
+
+background:#ddd;
+
+}
